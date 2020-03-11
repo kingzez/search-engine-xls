@@ -52,4 +52,12 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+  html, body, input, textarea, select, button {
+      background-color: #181a1b !important;
+      border-color: #575757 !important;
+      color: #e8e6e3 !important;
+  }
+}
 </style>

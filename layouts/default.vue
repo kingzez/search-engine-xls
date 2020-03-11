@@ -53,8 +53,19 @@ html {
   background-color: #35495e;
 }
 
+pre {
+  margin: 0 auto;
+  width: 41%;
+  text-align: left;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid #f1f1f1;
+}
+
 @media screen and (prefers-color-scheme: dark) {
-  html, body, input, textarea, select, button {
+  html, body, input, textarea, select, button, pre {
       background-color: #181a1b !important;
       border-color: #575757 !important;
       color: #e8e6e3 !important;

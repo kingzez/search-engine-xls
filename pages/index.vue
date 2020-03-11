@@ -124,18 +124,13 @@ export default {
 .search .el-input__prefix {
   left: 10px;
 }
-pre {
-  margin: 0 auto;
-  width: 41%;
-  text-align: left;
-  background: #f1f1f1;
-  padding: 10px;
-  border-radius: 4px;
-  font-size: 14px;
-}
 
 /* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
-@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
   .search-wrapper {
     width: 90%;
   }

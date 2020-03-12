@@ -9,7 +9,7 @@
             class="search"
             prefix-icon="el-icon-search"
             type="search"
-            @keyup.enter.native="get"
+            @keyup.enter.native="search"
           />
         </form>
       </div>
@@ -26,8 +26,7 @@
           @click="get"
         >
           查询
-        </a>
-        <p>ip: {{ ip }}</p>-->
+        </a>-->
         <pre v-if="result">{{ result }}</pre>
       </div>
     </div>
@@ -56,11 +55,7 @@ export default {
   },
   methods: {
     async search() {
-      const ip = await this.$axios.$get('http://icanhazip.com')
-      this.ip = ip
-    },
-    async get() {
-      if (!this.keywords) { return }
+      if (!this.keywords) return
       const res = await this.$axios.$get(`${location.origin}/search?keywords=${this.keywords}`)
       this.result = res
       // eslint-disable-next-line no-console
@@ -70,7 +65,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 .container {
   margin: 0 auto;
   height: 100vh;
@@ -85,24 +80,6 @@ export default {
   margin-top: 10%;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
 .links {
   padding-top: 15px;
 }
@@ -114,23 +91,20 @@ export default {
 
 .search {
   margin-top: 30px;
-}
-
-.search .el-input__inner {
-  border-radius: 23px;
-  line-height: 46px;
-  height: 46px;
-  padding-left: 50px;
-}
-
-.search .el-input__icon {
-  font-size: 16px;
-  width: 33px;
-  font-weight: bold;
-}
-
-.search .el-input__prefix {
-  left: 10px;
+  .el-input__inner {
+    border-radius: 23px;
+    line-height: 46px;
+    height: 46px;
+    padding-left: 50px;
+  }
+  .el-input__icon {
+    font-size: 16px;
+    width: 33px;
+    font-weight: bold;
+  }
+  .el-input__prefix {
+    left: 10px;
+  }
 }
 
 /* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */

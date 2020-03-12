@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div style="width: 100%">
+    <div class="wrap">
       <logo />
       <div class="search-wrapper">
         <form action="javascript:void(0)">
@@ -72,12 +72,17 @@ export default {
 
 <style>
 .container {
-  margin: 10% auto 0 auto;
+  margin: 0 auto;
   height: 100vh;
   display: flex;
   justify-content: center;
   /* align-items: center; */
   text-align: center;
+}
+
+.wrap {
+  width: 100%;
+  margin-top: 10%;
 }
 
 .title {
@@ -106,21 +111,24 @@ export default {
   width: 41%;
   margin: 0 auto;
 }
+
 .search {
-  /* width: 584px; */
   margin-top: 30px;
 }
+
 .search .el-input__inner {
   border-radius: 23px;
   line-height: 46px;
   height: 46px;
   padding-left: 50px;
 }
+
 .search .el-input__icon {
   font-size: 16px;
   width: 33px;
   font-weight: bold;
 }
+
 .search .el-input__prefix {
   left: 10px;
 }
@@ -134,6 +142,7 @@ export default {
   .search-wrapper {
     width: 90%;
   }
+
   pre {
     width: 90%;
   }

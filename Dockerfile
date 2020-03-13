@@ -11,11 +11,10 @@ RUN \
     ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN yarn
-# --prod
 
 ENV NODE_ENV="production"
 ENV PORT=3000
-ENV REDIS_HOST="127.0.0.1"
+ENV REDIS_HOST="redis"
 ENV REDIS_PORT=6379
 
 EXPOSE 3000

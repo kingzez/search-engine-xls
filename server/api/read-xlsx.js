@@ -1,10 +1,10 @@
 /* eslint-disable require-await */
-/* eslint-disable no-console */
 const path = require('path')
 const XLSX = require('xlsx')
 const { hmsetUtil } = require('./redis')
 
 async function readXlsx() {
+  // ToDo use stream will be better
   const filePath = path.join(__dirname, '../../data/city-code.xlsx')
   // console.log('file path is ', filePath)
   const table = XLSX.readFile(filePath)

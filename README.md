@@ -2,21 +2,30 @@
 
 > search data from xls without db
 
+## Feature
+
+- 📃search from xls file without db
+- ⚡speed up search with redis
+- 📱support dark mode
+- 🤟ssr with nuxt
+- 🚀bff with koa
+- 📦deploy with docker
+
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ yarn install
+yarn install
 
 # serve with hot reload at localhost:3000
-$ yarn dev
+yarn dev
 
 # build for production and launch server
-$ yarn build
-$ yarn start
+yarn build
+yarn start
 
 # generate static project
-$ yarn generate
+yarn generate
 ```
 
 ## Docker Deploy
@@ -37,8 +46,10 @@ docker pull ccr.ccs.tencentyun.com/nuxt/search-engine-xls:1.0.1
 
 # run app
 docker run -d --name search-app --network app-net --link redis:redis -p 3000:3000 --restart always cr.ccs.tencentyun.com/nuxt/search-engine-xls:1.0.1
+
+# check server whether started
+docker logs -f search-app
 ```
-done!
 
 ### Build docker image
 ```bash
@@ -48,5 +59,3 @@ make build
 # push docker image
 make push
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

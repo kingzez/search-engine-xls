@@ -1,8 +1,8 @@
 <template>
-  <img src="~/assets/logo.svg" alt="logo" class="logo">
+  <img src="~/assets/empty.svg" alt="no data" class="no-result">
 </template>
 <style>
-.logo {
+.no-result {
   animation: 1s appear;
   margin: auto;
   width: 245px;

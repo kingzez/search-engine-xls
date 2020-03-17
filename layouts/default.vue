@@ -54,7 +54,6 @@ html {
 }
 
 pre {
-  margin: 0 auto;
   width: 41%;
   text-align: left;
   background: #f1f1f1;

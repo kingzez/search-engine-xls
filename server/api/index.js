@@ -8,7 +8,7 @@ const hgetallAsync = promisify(client.hgetall).bind(client)
 
 const router = new Router()
 
-router.get('/search', async (ctx) => {
+router.get('/s', async (ctx) => {
   console.log(ctx.query)
   const { keywords } = ctx.query
   if (!keywords) return

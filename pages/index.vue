@@ -5,11 +5,11 @@
       <div class="search-wrapper">
         <form action="javascript:void(0)">
           <el-input
-            v-model="keywords"
+            v-model="q"
             class="search"
             prefix-icon="el-icon-search"
             type="search"
-            @keyup.enter.native="search"
+            @keyup.enter.native="route"
           />
         </form>
       </div>
@@ -23,7 +23,7 @@
         </a>-->
         <!-- <a
           class="button--grey"
-          @click="get"
+          @click="route"
         >
           查询
         </a>-->
@@ -42,12 +42,12 @@ export default {
   },
   data() {
     return {
-      keywords: '',
+      q: '',
       result: null
     }
   },
   watch: {
-    keywords(val, old) {
+    q(val, old) {
       if (!val) {
         this.result = null
       }
@@ -55,11 +55,20 @@ export default {
   },
   methods: {
     async search() {
-      if (!this.keywords) return
-      const res = await this.$axios.$get(`${location.origin}/search?keywords=${this.keywords}`)
+      if (!this.q) return
+      const res = await this.$axios.$get(`${location.origin}/s?keywords=${this.q}`)
       this.result = res
       // eslint-disable-next-line no-console
-      console.log(res)
+      // console.log(res)
+    },
+    route() {
+      if (!this.q) return
+      this.$router.push({
+        path: '/search',
+        query: {
+          q: this.q
+        }
+      })
     }
   }
 }
@@ -101,6 +110,7 @@ export default {
     font-size: 16px;
     width: 33px;
     font-weight: bold;
+    line-height: 47px;
   }
   .el-input__prefix {
     left: 10px;

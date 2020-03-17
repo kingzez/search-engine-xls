@@ -5,7 +5,7 @@ build:
 
 docker:
 	@echo "building docker image"
-	@docker build -t ccr.ccs.tencentyun.com/nuxt/search-engine-xls:1.1.0 .
+	@docker build -t ccr.ccs.tencentyun.com/nuxt/search-engine-xls:1.1.1 .
 
 push:
-	@docker push ccr.ccs.tencentyun.com/nuxt/search-engine-xls:1.1.0
+	@docker push ccr.ccs.tencentyun.com/nuxt/search-engine-xls:1.1.1

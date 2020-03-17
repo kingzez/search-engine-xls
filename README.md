@@ -42,10 +42,10 @@ docker pull redis
 docker run -d --name redis --network app-net --restart always redis
 
 # pull image
-docker pull ccr.ccs.tencentyun.com/nuxt/search-engine-xls:1.1.0
+docker pull ccr.ccs.tencentyun.com/nuxt/search-engine-xls:1.1.1
 
 # run app
-docker run -d --name search-app --network app-net --link redis:redis -p 3000:3000 --restart always cr.ccs.tencentyun.com/nuxt/search-engine-xls:1.1.0
+docker run -d --name search-app --network app-net --link redis:redis -p 3000:3000 --restart always cr.ccs.tencentyun.com/nuxt/search-engine-xls:1.1.1
 
 # check server whether started
 docker logs -f search-app

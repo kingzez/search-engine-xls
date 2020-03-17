@@ -65,9 +65,9 @@ pre {
 
 @media screen and (prefers-color-scheme: dark) {
   html, body, input, textarea, select, button, pre {
-      background-color: #181a1b !important;
-      border-color: #575757 !important;
-      color: #e8e6e3 !important;
+      background-color: #222F3F !important;
+      border-color: #6e7379 !important;
+      color: #AAB5C1 !important;
   }
 }
 </style>

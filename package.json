@@ -30,7 +30,7 @@
     "koa-router": "^8.0.8",
     "nuxt": "^2.0.0",
     "redis": "^3.0.2",
-    "xlsx": "^0.15.5"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
